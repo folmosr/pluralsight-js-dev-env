@@ -1,7 +1,6 @@
 import './index.css'
 import {getUsers, deleteUser} from './api/userApi'
 
-
 getUsers().then(result => {
   let userBody = '';
   result.forEach(user =>{
@@ -19,7 +18,6 @@ getUsers().then(result => {
 
   Array.from (deleteLinks, link => {
     link.onclick = function(e){
-      debugger;
       const element = e.target;
       e.preventDefault();
       deleteUser(element.attributes['data-id'].value);
